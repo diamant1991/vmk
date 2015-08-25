@@ -28,13 +28,13 @@ header .center .right .shopping-block .number{width:21px;height:13px;background:
 header .center .right .top .coat{float:right;}
 header > .bottom{background:#3b3a40;border-bottom:1px solid white;}
 header .bottom ul#nav{width:100%;display:table;}
-header .bottom ul#nav li{display:table-cell;font-size:12px;position:relative;text-align:center;}
+header .bottom ul#nav li{display:table-cell;font-size:12px;text-align:center;}
 header .bottom ul#nav li a{display:block;padding:10px 0;}
 header .bottom ul#nav li .submenu{position:absolute;z-index:10;display:block;width:230px;background:#35343a;margin-top:1px;}
-header .bottom ul#nav li .submenu li{width:230px;display:block;text-align:left;position:relative;}
-header .bottom ul#nav li .submenu li a{display:block;width:215px;padding-left:15px;}
+header .bottom ul#nav li .submenu li{width:230px;display:block;text-align:left;}
+header .bottom ul#nav li .submenu li a{display:block;width:215px;padding-left:15px;text-decoration: none !important;}
 header .bottom ul#nav li .submenu li a:hover{color:white;background:#df8345;}
-header .bottom ul#nav li .submenu li:nth-child(1){color:#df8345;font-size:16px;text-transform:uppercase;font-family: "GothamProRegular";padding:10px 15px;}
+header .bottom ul#nav li .submenu > li:nth-child(1){color:#df8345;font-size:16px;text-transform:uppercase;font-family: "GothamProRegular";padding:10px 15px;}
 
 .content.second .inwards{padding-left:240px;width:720px;}
 
@@ -218,5 +218,71 @@ header .sgorod{background:none;border:none;font-family: "GothamProLight";font-si
 footer .right p{margin-top:23px;}
 footer .right p a{color:inherit;}
 
+.submenu-child{
+	position: absolute;
+   left: 230px;
+   padding-top: 10px;
+   height: 292px;
+   top: 0;
+   width: 720px;
+   background: #35343a;
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: opacity 0.25s ease-in-out;
+   -o-transition: opacity 0.25s ease-in-out;
+   transition: opacity 0.25s ease-in-out;
+}
+.slide-text{
+	width: 320px;
+	color: #fff;
+}
+	.slide-text h3{
+		text-transform: uppercase;
+		color: #df8345;
+	}
+	.slide-text p{
+		line-height: 1.5;
+	}
+.slide{
+	position: relative;
+}
 
+.slide-img{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 390px;
+    text-align: center;
+}
 
+.sub-slider-wrapper{
+	padding-left: 15px;
+}
+
+.pager li.active a{
+	  background: #df8345;
+}
+
+.submenu > li:hover .submenu-child{
+	opacity: 1;
+	visibility: visible;
+}
+
+.nav-child{
+	position: absolute;
+	z-index: 10;
+	background: #35343a;
+	padding: 5px 15px;
+	min-width: 120px;
+	display: none;
+}
+.nav-child li{
+	display: block !important;
+	text-align: left !important;
+}
+header .bottom ul#nav li:hover > a{
+	 color: #df8345;
+}
+header .bottom ul#nav li:hover .nav-child{
+	display: block;
+}
